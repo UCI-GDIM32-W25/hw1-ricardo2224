@@ -1,46 +1,66 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/MjLLqDcN)
 # HW1
 ## W1L2 In-Class Activity
-In-class activity:
-Group Name: Makabaka Studio
-Name: Gaofeng Liu, Hankun Liu, Zhengyan Lu
 
-How would you describe this game world in Objects?
+## Group Name
+**Makabaka Studio**  
+**Members**: Gaofeng Liu, Hankun Liu, Zhengyan Lu
 
-UI
-Seeds planted number
-Seeds reminded number
+---
 
-Player
-movement: WASD to move
+## Game World Description
 
-Seed
-Space to plant seeds
+### Objects in the Game World:
+- **UI**
+  - Seeds Planted Number
+  - Seeds Remaining Number
 
-What attributes and actions do these objects have?
+- **Player**
+  - Movement: `WASD` to move
 
-Player
-Attributes:
-Bunny sprites
-Action:
-Push WASD to move
-Push the space to plant the seeds. The number of seeds planted increases and the seeds
-remaining decrease.(show up in the UI)
+- **Seed**
+  - Planting: `Space` to plant seeds
 
-Plant
-Attributes:
-Plant sprites
+---
 
-Seed planted UI
-Attributes: text
-Actions: The count goes up when the player plants a seed
+## Object Attributes and Actions
 
-Seed remaining UI
-Attributes: text 
-Actions: The count goes down when the player plants a seed
+### Player
+- **Attributes**:
+  - Bunny sprite
+- **Actions**:
+  - Move with `WASD`
+  - Plant seeds with `Space`
+    - **Effect**: 
+      - Increases the number of seeds planted.
+      - Decreases the number of seeds remaining.
+      - Updates these numbers in the UI.
 
-How do these objects act on or affect each other?
-Players can grow plants, which appear when the player presses the space
+### Plant
+- **Attributes**:
+  - Plant sprite
+
+### Seed Planted UI
+- **Attributes**:
+  - Text field
+- **Actions**:
+  - The count increases when the player plants a seed.
+
+### Seed Remaining UI
+- **Attributes**:
+  - Text field
+- **Actions**:
+  - The count decreases when the player plants a seed.
+
+---
+
+## Object Interactions
+- **Player**:
+  - Plants seeds, which instantiate plants at the player's position when the `Space` key is pressed.
+  - Updates the UI to reflect changes in the number of seeds planted and seeds remaining.
+- **UI**:
+  - Displays real-time feedback based on the player's actions.
+
 
 
 ## Devlog
