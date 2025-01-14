@@ -69,80 +69,27 @@ Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lectur
 
 # Devlog
 
----
+## Construction
 
-## Game World in Objects  
+Based on the in-class activity, I structured HW1 by breaking the game into three main components: the Player, UI elements (Seeds Planted and Seeds Remaining), and Plants. The core mechanics involve player movement and seed planting, with dynamic updates reflected in the UI. This approach ensured a clear focus on integrating game actions and visual feedback.
 
-### Player (Bunny)  
-- **Attributes**:
-  - Bunny Sprite for character visuals.  
-  - Movement speed (`_speed`).  
-  - Initial seed count (`_numSeeds`).
-- **Actions**:
-  - Move using `WASD` keys.  
-  - Plant seeds by pressing the `Space` key, which:
-    - Instantiates a plant at the bunny's current position.  
-    - Decreases the number of seeds remaining.  
-    - Updates the seeds planted count on the UI.
+## Code Part
 
-### Plant  
-- **Attributes**:
-  - Visual representation via plant prefab.  
-- **Actions**:
-  - Appears when a seed is planted.
+The initial plan translated into the code implementation as follows:
 
-### Seed Planted UI  
-- **Attributes**:
-  - Displays the number of seeds planted.  
-- **Actions**:
-  - Increments whenever the player plants a seed.  
+- **Player Movement and Actions:**  
+  In the `Player.cs` script, movement is controlled using `Input.GetKey()` for WASD keys, while planting seeds is triggered by the Space key. Planting seeds decreases `_numSeedsLeft`, increases `_numSeedsPlanted`, and spawns a plant prefab at the player’s position.
 
-### Seed Remaining UI  
-- **Attributes**:
-  - Displays the number of seeds left.  
-- **Actions**:
-  - Decrements whenever the player plants a seed.  
+- **UI Updates:**  
+  The `PlantCountUI.cs` script manages the UI text fields for seeds planted and remaining. The `UpdateSeeds()` method is called each time a seed is planted to ensure real-time updates, providing consistent feedback to the player.
 
----
+## Challenges and Solutions
 
-## Core Mechanics  
+The primary challenge was ensuring UI updates occurred in real-time. Initially, the UI text fields failed to refresh immediately after planting seeds. This was resolved by introducing the `UpdateSeeds()` method in the UI script and invoking it whenever seed counts changed. Testing this method step by step confirmed the issue was fixed.
 
-### Movement  
-- The bunny moves smoothly in 2D space using the `WASD` keys.  
-- Provides players with tactile control over their character's position.  
+## Key Takeaways
 
-### Planting Seeds  
-- Players can plant seeds by pressing the `Space` key.  
-- A seed transforms into a plant at the bunny's position, reducing the remaining seeds and increasing the planted seeds count.  
-- Both changes are reflected in the UI.  
-
----
-
-## Code Implementation
-
-### Player Controls and Actions (`Player.cs`)  
-
-- **Movement**:  
-  - Implemented using `Input.GetKey()` for real-time responsiveness.  
-  - The bunny moves in the specified direction based on key presses, with speed scaled by `Time.deltaTime`.  
-- **Planting Seeds**:  
-  - Checks if the player has seeds remaining before instantiating a plant prefab.  
-  - Adjust the `_numSeedsLeft` and `_numSeedsPlanted` counters.  
-  - Calls `UpdateSeeds()` on the UI component to reflect changes.  
-
-### User Interface Updates (`PlantCountUI.cs`)  
-- Automatically update the text to show how many seeds have been planted and how many are left.  
-- Ensures real-time feedback for player actions, maintaining clarity.  
-
----
-
-## Inter-object Interactions  
-
-- **Player** interacts with the **PlantCountUI** to update the on-screen seed counters.  
-  - Every time the player plants a seed, the UI updates to show the new numbers, making sure the gameplay and what the player sees match perfectly.  
-- **Plant prefab** is spawned right where the player is standing, showing the planted seed as a plant.
-
-
+This project taught me to break down game mechanics into manageable components and integrate them effectively using scripts. I gained a deeper understanding of the importance of real-time UI feedback in enhancing player experience. 
 
 ## Open-Source Assets
 If you added any other outside assets, list them here!
