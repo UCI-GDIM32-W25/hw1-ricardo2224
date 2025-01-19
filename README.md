@@ -61,12 +61,6 @@
 - **UI**:
   - Displays real-time feedback based on the player's actions.
 
-
-
-## Devlog
-Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lecture 2 (Jan 9) in-class activity (above). If you did not attend and perform this activity, review the lecture slides and write your own plan for how you believe HW1 should be built. If your initially proposed plan turned out significantly different than the activity answers given by Prof Reid, you may want to note what was different. Then, write about how the plan you wrote in the break-down connects to the code you wrote. Cite specific class names and method names in the code and GameObjects in your Unity Scene.
-
-
 # Devlog
 
 ## Construction
@@ -94,3 +88,6 @@ This project taught me to break down game mechanics into manageable components a
 ## Open-Source Assets
 If you added any other outside assets, list them here!
 - [Sprout Lands sprite asset pack](https://cupnooble.itch.io/sprout-lands-asset-pack) - character and item sprites
+
+## Prof comments
+Thank you for formatting your Devlog neatly and for clearly connecting the break-down activity to the code you wrote. This was most clear in the sections titled 'Construction' and 'Code Part' - to be honest, I don't think the 'challenges and solutions' and 'key takeaways' sections were totally necessary as they don't really address the prompt. Also, you can also remove the prompts from your submitted Devlogs. Good job overall!
